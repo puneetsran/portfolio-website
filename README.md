@@ -31,6 +31,5 @@ open index.html
 
 ## 📧 Contact
 
-- Email: [psran711@gmail.com](mailto:psran711@gmail.com)
 - LinkedIn: [puneetsran](https://www.linkedin.com/in/puneetsran/)
 - GitHub: [puneetsran](https://github.com/puneetsran)
