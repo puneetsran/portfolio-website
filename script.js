@@ -316,6 +316,13 @@ function animateStats() {
         const stat = entry.target;
         const finalValue = stat.textContent;
         const numericValue = parseInt(finalValue.replace(/\D/g, ""));
+
+        // Skip animation for non-numeric values like "High Impact"
+        if (isNaN(numericValue) || numericValue === 0) {
+          observer.unobserve(stat);
+          return;
+        }
+
         const suffix = finalValue.replace(/[\d,]/g, "");
 
         let currentValue = 0;
