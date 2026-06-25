@@ -76,13 +76,14 @@
         </div>
       </div>
       <nav class="main-nav">
-        <a href="#about"><i class="fa-solid fa-user"></i> About</a>
-        <a href="#skills"><i class="fa-solid fa-gear"></i> Skills</a>
-        <a href="#experience"
-          ><i class="fa-solid fa-briefcase"></i> Experience</a
-        >
-        <a href="#projects"><i class="fa-solid fa-flask"></i> Projects</a>
-        <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
+        <div></div>
+        <div class="nav-links">
+          <a href="#about"><i class="fa-solid fa-user"></i> About</a>
+          <a href="#skills"><i class="fa-solid fa-gear"></i> Skills</a>
+          <a href="#experience"><i class="fa-solid fa-briefcase"></i> Experience</a>
+          <a href="#projects"><i class="fa-solid fa-flask"></i> Projects</a>
+          <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
+        </div>
       </nav>
     </header>
 
@@ -424,6 +425,160 @@
           <div class="project-card">
             <div class="project-header">
               <h3>
+                <i class="fas fa-sitemap"></i> Schema Registry Sync & Visualization
+              </h3>
+              <div class="project-type">
+                Data Engineering • Developer Tooling
+              </div>
+            </div>
+            <div class="project-description">
+              <p>
+                Automated pipeline that continuously syncs a marketing platform's
+                live schema registry into a searchable HTML reference and a
+                self-updating diagram, keeping the team's data model documentation
+                always current without manual effort.
+              </p>
+            </div>
+            <div class="project-highlights">
+              <div class="highlight-item">
+                <i class="fas fa-sync-alt"></i>
+                <span>
+                  Scheduled batch job that fetches, filters, and renders schema
+                  definitions into multiple output formats including interactive
+                  HTML and diagram XML
+                </span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-search"></i>
+                <span>
+                  Client-side search, identity field cross-reference matrix, and
+                  ML model lookup — all self-contained with no external dependencies
+                </span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-code-branch"></i>
+                <span>
+                  Deployed via infrastructure-as-code with multi-environment
+                  support, Slack failure alerting, and versioned container images
+                </span>
+              </div>
+            </div>
+            <div class="tech-stack">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">Cloud Batch</span>
+              <span class="tech-tag">Cloud Workflows</span>
+              <span class="tech-tag">Cloud Scheduler</span>
+              <span class="tech-tag">Pulumi (IaC)</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3>
+                <i class="fas fa-robot"></i> AI-Powered Internal Data Assistant
+              </h3>
+              <div class="project-type">
+                AI Engineering • Internal Tooling
+              </div>
+            </div>
+            <div class="project-description">
+              <p>
+                Conversational AI assistant deployed on Slack and Google Chat that
+                answers internal team questions about datasets, audience segments,
+                journey configurations, and schema fields — using an agentic LLM
+                loop with live marketing platform API integrations.
+              </p>
+            </div>
+            <div class="project-highlights">
+              <div class="highlight-item">
+                <i class="fas fa-brain"></i>
+                <span>
+                  Multi-turn agentic loop where the LLM issues tool calls across
+                  live APIs until it has enough context to answer — up to multiple
+                  rounds of reasoning per question
+                </span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-bolt"></i>
+                <span>
+                  Schema fields pre-indexed at build time for fast, rate-limit-free
+                  lookups; audience and journey data fetched live on demand
+                </span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-comments"></i>
+                <span>
+                  Thread-aware on Slack — uses full conversation history as context
+                  for follow-up questions within a thread
+                </span>
+              </div>
+            </div>
+            <div class="tech-stack">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Anthropic Claude SDK</span>
+              <span class="tech-tag">Agentic AI</span>
+              <span class="tech-tag">Slack Bolt</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">Cloud Run</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3>
+                <i class="fas fa-bell"></i> Push Notification Traffic Analyzer
+              </h3>
+              <div class="project-type">
+                Full-Stack • Platform Engineering
+              </div>
+            </div>
+            <div class="project-description">
+              <p>
+                Web application that helps campaign operations teams assess the
+                traffic impact of push notifications before they are sent —
+                querying live observability telemetry and modeling projected load
+                against historical peak baselines to produce a clear recommendation.
+              </p>
+            </div>
+            <div class="project-highlights">
+              <div class="highlight-item">
+                <i class="fas fa-chart-bar"></i>
+                <span>
+                  Runs parallel telemetry queries (baseline traffic, 90-day peak,
+                  error rate, response time) and models projected load using a
+                  batch send model, outputting green/yellow/red impact ratings
+                </span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-layer-group"></i>
+                <span>
+                  Always analyzes background services affected by every push send
+                  in addition to the destination screen, giving a complete traffic
+                  picture
+                </span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-lock"></i>
+                <span>
+                  Deployed on a fully managed cloud platform with identity-aware
+                  access control, CI/CD automation, and infrastructure-as-code
+                </span>
+              </div>
+            </div>
+            <div class="tech-stack">
+              <span class="tech-tag">React & Vite</span>
+              <span class="tech-tag">Node.js & Express</span>
+              <span class="tech-tag">Dynatrace DQL</span>
+              <span class="tech-tag">Cloud Run</span>
+              <span class="tech-tag">Terraform (IaC)</span>
+              <span class="tech-tag">Cloud Build CI/CD</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3>
                 <i class="fas fa-shopping-cart"></i> Cart Abandonment Recovery
                 System
               </h3>
@@ -613,160 +768,6 @@
               <span class="tech-tag">BigQuery</span>
               <span class="tech-tag">GCP</span>
               <span class="tech-tag">YAML</span>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-header">
-              <h3>
-                <i class="fas fa-sitemap"></i> Schema Registry Sync & Visualization
-              </h3>
-              <div class="project-type">
-                Data Engineering • Developer Tooling
-              </div>
-            </div>
-            <div class="project-description">
-              <p>
-                Automated pipeline that continuously syncs a marketing platform's
-                live schema registry into a searchable HTML reference and a
-                self-updating diagram, keeping the team's data model documentation
-                always current without manual effort.
-              </p>
-            </div>
-            <div class="project-highlights">
-              <div class="highlight-item">
-                <i class="fas fa-sync-alt"></i>
-                <span>
-                  Scheduled batch job that fetches, filters, and renders schema
-                  definitions into multiple output formats including interactive
-                  HTML and diagram XML
-                </span>
-              </div>
-              <div class="highlight-item">
-                <i class="fas fa-search"></i>
-                <span>
-                  Client-side search, identity field cross-reference matrix, and
-                  ML model lookup — all self-contained with no external dependencies
-                </span>
-              </div>
-              <div class="highlight-item">
-                <i class="fas fa-code-branch"></i>
-                <span>
-                  Deployed via infrastructure-as-code with multi-environment
-                  support, Slack failure alerting, and versioned container images
-                </span>
-              </div>
-            </div>
-            <div class="tech-stack">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Docker</span>
-              <span class="tech-tag">Cloud Batch</span>
-              <span class="tech-tag">Cloud Workflows</span>
-              <span class="tech-tag">Cloud Scheduler</span>
-              <span class="tech-tag">Pulumi (IaC)</span>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-header">
-              <h3>
-                <i class="fas fa-robot"></i> AI-Powered Internal Data Assistant
-              </h3>
-              <div class="project-type">
-                AI Engineering • Internal Tooling
-              </div>
-            </div>
-            <div class="project-description">
-              <p>
-                Conversational AI assistant deployed on Slack and Google Chat that
-                answers internal team questions about datasets, audience segments,
-                journey configurations, and schema fields — using an agentic LLM
-                loop with live marketing platform API integrations.
-              </p>
-            </div>
-            <div class="project-highlights">
-              <div class="highlight-item">
-                <i class="fas fa-brain"></i>
-                <span>
-                  Multi-turn agentic loop where the LLM issues tool calls across
-                  live APIs until it has enough context to answer — up to multiple
-                  rounds of reasoning per question
-                </span>
-              </div>
-              <div class="highlight-item">
-                <i class="fas fa-bolt"></i>
-                <span>
-                  Schema fields pre-indexed at build time for fast, rate-limit-free
-                  lookups; audience and journey data fetched live on demand
-                </span>
-              </div>
-              <div class="highlight-item">
-                <i class="fas fa-comments"></i>
-                <span>
-                  Thread-aware on Slack — uses full conversation history as context
-                  for follow-up questions within a thread
-                </span>
-              </div>
-            </div>
-            <div class="tech-stack">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Anthropic Claude SDK</span>
-              <span class="tech-tag">Agentic AI</span>
-              <span class="tech-tag">Slack Bolt</span>
-              <span class="tech-tag">Docker</span>
-              <span class="tech-tag">Cloud Run</span>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-header">
-              <h3>
-                <i class="fas fa-bell"></i> Push Notification Traffic Analyzer
-              </h3>
-              <div class="project-type">
-                Full-Stack • Platform Engineering
-              </div>
-            </div>
-            <div class="project-description">
-              <p>
-                Web application that helps campaign operations teams assess the
-                traffic impact of push notifications before they are sent —
-                querying live observability telemetry and modeling projected load
-                against historical peak baselines to produce a clear recommendation.
-              </p>
-            </div>
-            <div class="project-highlights">
-              <div class="highlight-item">
-                <i class="fas fa-chart-bar"></i>
-                <span>
-                  Runs parallel telemetry queries (baseline traffic, 90-day peak,
-                  error rate, response time) and models projected load using a
-                  batch send model, outputting green/yellow/red impact ratings
-                </span>
-              </div>
-              <div class="highlight-item">
-                <i class="fas fa-layer-group"></i>
-                <span>
-                  Always analyzes background services affected by every push send
-                  in addition to the destination screen, giving a complete traffic
-                  picture
-                </span>
-              </div>
-              <div class="highlight-item">
-                <i class="fas fa-lock"></i>
-                <span>
-                  Deployed on a fully managed cloud platform with identity-aware
-                  access control, CI/CD automation, and infrastructure-as-code
-                </span>
-              </div>
-            </div>
-            <div class="tech-stack">
-              <span class="tech-tag">React & Vite</span>
-              <span class="tech-tag">Node.js & Express</span>
-              <span class="tech-tag">Dynatrace DQL</span>
-              <span class="tech-tag">Cloud Run</span>
-              <span class="tech-tag">Terraform (IaC)</span>
-              <span class="tech-tag">Cloud Build CI/CD</span>
             </div>
           </div>
 
