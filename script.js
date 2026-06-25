@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ===== SMOOTH SCROLLING FOR NAVIGATION =====
 function initSmoothScrolling() {
-  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+  const navLinks = document.querySelectorAll('.main-nav a[href^="#"]');
 
   navLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
@@ -128,7 +128,7 @@ function initThemeToggle() {
 // ===== ACTIVE NAV ON SCROLL =====
 function initActiveNav() {
   const sections = document.querySelectorAll("main section[id]");
-  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+  const navLinks = document.querySelectorAll('.main-nav a[href^="#"]');
 
   const observer = new IntersectionObserver(
     (entries) => {
