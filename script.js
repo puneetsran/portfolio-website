@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initialize all interactive features
   initSmoothScrolling();
-  initTypingAnimation();
+  initActiveNav();
   initSkillAnimations();
   initContactForm();
   initThemeToggle();
@@ -47,52 +47,6 @@ function initSmoothScrolling() {
       }
     });
   });
-}
-
-// ===== TYPING ANIMATION FOR HERO SUBTITLE =====
-function initTypingAnimation() {
-  const subtitle = document.querySelector(".hero .subtitle");
-  if (!subtitle) return;
-
-  const roles = [
-    "Data Engineering Professional",
-    "Python & SQL Expert",
-    "GCP Cloud Specialist",
-    "Machine Learning Enthusiast",
-    "Business Intelligence Developer",
-  ];
-
-  let currentRole = 0;
-  let currentChar = 0;
-  let isDeleting = false;
-
-  function typeRole() {
-    const current = roles[currentRole];
-
-    if (isDeleting) {
-      subtitle.textContent = current.substring(0, currentChar - 1);
-      currentChar--;
-    } else {
-      subtitle.textContent = current.substring(0, currentChar + 1);
-      currentChar++;
-    }
-
-    let typeSpeed = isDeleting ? 50 : 100;
-
-    if (!isDeleting && currentChar === current.length) {
-      typeSpeed = 2000; // Pause at end
-      isDeleting = true;
-    } else if (isDeleting && currentChar === 0) {
-      isDeleting = false;
-      currentRole = (currentRole + 1) % roles.length;
-      typeSpeed = 500; // Pause before next role
-    }
-
-    setTimeout(typeRole, typeSpeed);
-  }
-
-  // Start typing animation after a short delay
-  setTimeout(typeRole, 1000);
 }
 
 // ===== SKILL TAG ANIMATIONS =====
@@ -146,67 +100,52 @@ function initContactForm() {
 
 // ===== THEME TOGGLE (DARK/LIGHT MODE) =====
 function initThemeToggle() {
-  // Create theme toggle button
+  const nav = document.querySelector(".main-nav");
+  if (!nav) return;
+
   const themeToggle = document.createElement("button");
-  themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-  themeToggle.className = "theme-toggle";
+  themeToggle.className = "theme-toggle-nav";
   themeToggle.setAttribute("aria-label", "Toggle dark mode");
+  nav.appendChild(themeToggle);
 
-  // Add styles for theme toggle
-  const style = document.createElement("style");
-  style.textContent = `
-        .theme-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            border: none;
-            background: var(--primary-color);
-            color: white;
-            font-size: 1.2rem;
-            cursor: pointer;
-            z-index: 1000;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        }
-        
-        .theme-toggle:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        body.dark-theme {
-            --gray-50: #1e293b;
-            --gray-100: #334155;
-            --gray-200: #475569;
-            --white: #0f172a;
-            --gray-800: #f1f5f9;
-            --gray-900: #ffffff;
-        }
-    `;
-  document.head.appendChild(style);
-  document.body.appendChild(themeToggle);
-
-  // Check for saved theme preference
   const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "dark") {
-    document.body.classList.add("dark-theme");
-    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-  }
+  const isDarkInit = savedTheme === "dark";
+  if (isDarkInit) document.body.classList.add("dark-theme");
+  themeToggle.innerHTML = isDarkInit
+    ? '<i class="fas fa-sun"></i>'
+    : '<i class="fas fa-moon"></i>';
 
   themeToggle.addEventListener("click", function () {
     document.body.classList.toggle("dark-theme");
     const isDark = document.body.classList.contains("dark-theme");
-
     this.innerHTML = isDark
       ? '<i class="fas fa-sun"></i>'
       : '<i class="fas fa-moon"></i>';
     localStorage.setItem("theme", isDark ? "dark" : "light");
-
-    showNotification(`Switched to ${isDark ? "dark" : "light"} mode`, "info");
   });
+}
+
+// ===== ACTIVE NAV ON SCROLL =====
+function initActiveNav() {
+  const sections = document.querySelectorAll("main section[id]");
+  const navLinks = document.querySelectorAll('.main-nav a[href^="#"]');
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navLinks.forEach((link) => link.classList.remove("active"));
+          const active = document.querySelector(
+            `.main-nav a[href="#${entry.target.id}"]`
+          );
+          if (active) active.classList.add("active");
+        }
+      });
+    },
+    { rootMargin: "-40% 0px -55% 0px" }
+  );
+
+  sections.forEach((s) => observer.observe(s));
 }
 
 // ===== SCROLL PROGRESS INDICATOR =====
@@ -353,7 +292,7 @@ document.addEventListener("DOMContentLoaded", animateStats);
 document.addEventListener("keydown", function (e) {
   // Press 'T' to toggle theme
   if (e.key.toLowerCase() === "t" && !e.ctrlKey && !e.metaKey) {
-    const themeToggle = document.querySelector(".theme-toggle");
+    const themeToggle = document.querySelector(".theme-toggle-nav");
     if (themeToggle && document.activeElement.tagName !== "INPUT") {
       themeToggle.click();
     }
@@ -368,18 +307,12 @@ document.addEventListener("keydown", function (e) {
 
 // ===== PERFORMANCE MONITORING =====
 window.addEventListener("load", function () {
-  // Log performance metrics
   const perfData = performance.getEntriesByType("navigation")[0];
   console.log(
-    "🚀 Portfolio loaded in:",
+    "Portfolio loaded in:",
     Math.round(perfData.loadEventEnd - perfData.fetchStart),
     "ms"
   );
-
-  // Show loading complete notification
-  setTimeout(() => {
-    showNotification("Portfolio loaded successfully!", "success");
-  }, 500);
 });
 
 // ===== EASTER EGG =====
@@ -432,7 +365,7 @@ document.addEventListener("keydown", function (e) {
 if (typeof module !== "undefined" && module.exports) {
   module.exports = {
     initSmoothScrolling,
-    initTypingAnimation,
+    initActiveNav,
     showNotification,
     animateStats,
   };
