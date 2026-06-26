@@ -47,6 +47,23 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Structured data: helps Google correctly identify gender/pronouns -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Puneet Sran",
+      "gender": "Female",
+      "pronouns": "she/her",
+      "jobTitle": "Data & AI Engineering Professional",
+      "url": "https://puneetsran.github.io/portfolio-website/",
+      "sameAs": [
+        "https://github.com/puneetsran",
+        "https://www.linkedin.com/in/puneetsran/"
+      ]
+    }
+    </script>
   </head>
   <body>
     <header class="hero animate__animated animate__fadeInDown">
@@ -72,6 +89,7 @@
             Puneet Sran
             <span class="accent"><i class="fas fa-database"></i></span>
           </h1>
+          <p class="pronouns">she/her</p>
           <p class="subtitle">Data & AI Engineering Professional</p>
         </div>
       </div>
