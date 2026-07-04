@@ -17,11 +17,11 @@
     <!-- Open Graph Meta Tags -->
     <meta
       property="og:title"
-      content="Puneet Sran - Data Engineering Professional"
+      content="Puneet Sran - Data & AI Engineering Professional"
     />
     <meta
       property="og:description"
-      content="Experienced Data Engineer specializing in cloud platforms, ETL pipelines, and business intelligence solutions."
+      content="Data & AI Engineer building production pipelines, live products, and AI-powered tooling."
     />
     <meta property="og:type" content="website" />
     <meta
@@ -29,11 +29,11 @@
       content="https://puneetsran.github.io/portfolio-website/"
     />
 
-    <!-- Modern Google Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
 
@@ -66,57 +66,80 @@
     </script>
   </head>
   <body>
-    <header class="hero animate__animated animate__fadeInDown">
-      <div class="hero-content">
-        <!-- SVG Illustration (Data/Tech theme, can be swapped for a custom one) -->
-        <div class="hero-graphic">
-          <svg width="110" height="110" viewBox="0 0 110 110" fill="none">
-            <circle
-              cx="55"
-              cy="55"
-              r="53"
-              fill="#f3e8ff"
-              stroke="#7c3aed"
-              stroke-width="4"
-            />
-            <rect x="30" y="45" width="50" height="30" rx="8" fill="#7c3aed" />
-            <rect x="39" y="55" width="32" height="8" rx="4" fill="#fff" />
-            <circle cx="55" cy="73" r="4" fill="#fff" />
-          </svg>
-        </div>
-        <div>
-          <h1>
-            Puneet Sran
-            <span class="accent"><i class="fas fa-database"></i></span>
-          </h1>
-          <p class="pronouns">she/her</p>
-          <p class="subtitle">Data & AI Engineering Professional</p>
+    <nav class="top-nav">
+      <a href="#top" class="nav-brand">Puneet Sran</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        aria-label="Toggle dark mode"
+      >
+        <i class="fas fa-moon"></i>
+      </button>
+    </nav>
+
+    <header id="top" class="hero">
+      <div class="hero-inner">
+        <p class="hero-eyebrow">
+          <span>she/her</span>
+          <span class="dot" aria-hidden="true"></span>
+          <span>Phoenix, AZ</span>
+        </p>
+        <h1>Puneet Sran</h1>
+        <p class="hero-tagline">
+          Data & AI Engineer building production pipelines, live products, and
+          AI tooling that teams actually use.
+        </p>
+        <p class="hero-summary">
+          Master's in Data Science. Expert in Python, SQL, and GCP. I turn
+          complex data systems into automated, production-grade solutions and
+          ship real products on the side.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fa-solid fa-flask"></i> View projects
+          </a>
+          <a
+            href="https://github.com/puneetsran"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-ghost"
+          >
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/puneetsran/"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-ghost"
+          >
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
         </div>
       </div>
-      <nav class="main-nav">
-        <a href="#about"><i class="fa-solid fa-user"></i> About</a>
-        <a href="#skills"><i class="fa-solid fa-gear"></i> Skills</a>
-        <a href="#experience"><i class="fa-solid fa-briefcase"></i> Experience</a>
-        <a href="#projects"><i class="fa-solid fa-flask"></i> Projects</a>
-        <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
-      </nav>
     </header>
 
     <main>
-      <!-- Hero Stats Section -->
+      <!-- Stats -->
       <section class="stats-section" data-aos="fade-up">
         <div class="stats-container">
-          <div class="stat-item">
-            <div class="stat-number">High</div>
-            <div class="stat-label">Business Impact</div>
-          </div>
           <div class="stat-item">
             <div class="stat-number">13+</div>
             <div class="stat-label">Data Pipelines Built</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number">3+</div>
+            <div class="stat-number">4+</div>
             <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">3</div>
+            <div class="stat-label">Live Products Shipped</div>
           </div>
           <div class="stat-item">
             <div class="stat-number">100%</div>
@@ -137,7 +160,7 @@
               and data pipelines that drive real business impact.
             </p>
             <p>
-              I bridge marketing operations and data engineering — turning complex
+              I bridge marketing operations and data engineering, turning complex
               customer identity systems, campaign telemetry, and live platform APIs
               into automated, production-grade solutions. Increasingly focused on
               leveraging AI to rapidly design and ship tools that teams actually use.
@@ -158,6 +181,11 @@
 
       <section id="skills" class="card" data-aos="fade-up">
         <h2><i class="fa-solid fa-gear"></i> Technical Skills</h2>
+        <div class="skills-legend">
+          <span><span class="legend-swatch expert"></span> Expert</span>
+          <span><span class="legend-swatch intermediate"></span> Intermediate</span>
+          <span><span class="legend-swatch beginner"></span> Familiar</span>
+        </div>
         <div class="skills-grid">
           <div class="skill-category">
             <h3><i class="fas fa-code"></i> Programming Languages</h3>
@@ -435,438 +463,745 @@
       </section>
 
       <section id="projects" class="card" data-aos="fade-up">
-        <h2><i class="fa-solid fa-flask"></i> Featured Projects</h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <div class="project-header">
-              <h3>
-                <i class="fas fa-sitemap"></i> Schema Registry Sync & Visualization
-              </h3>
-              <div class="project-type">
-                Data Engineering • Developer Tooling
+        <h2><i class="fa-solid fa-flask"></i> Projects</h2>
+
+        <div class="project-group">
+          <h3 class="project-group-title">
+            <i class="fas fa-rocket"></i> Products I've Shipped
+          </h3>
+          <p class="project-group-note">
+            Live products I designed, built, and operate end to end. Source is
+            private by design; the products speak for themselves.
+          </p>
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="project-header">
+                <h3><i class="fas fa-newspaper"></i> Trending Now</h3>
+                <div class="project-type">Live Product • Full Stack</div>
+              </div>
+              <div class="project-description">
+                <p>
+                  A live dashboard showing what's trending across the internet
+                  right now: Reddit, Google Trends, Hacker News, Bluesky,
+                  Wikipedia, and YouTube in one ranked feed, with daily email
+                  digests and topic follows.
+                </p>
+              </div>
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <i class="fas fa-layer-group"></i>
+                  <span
+                    >Six public data sources normalized into one feed, with
+                    archive pages and per-topic history</span
+                  >
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-envelope-open-text"></i>
+                  <span
+                    >Email digest subscriptions with scheduled sending and
+                    signed-in topic follows</span
+                  >
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-puzzle-piece"></i>
+                  <span
+                    >Daily games built on the trend data: word game, sudoku,
+                    and a mini crossword</span
+                  >
+                </div>
+              </div>
+              <div class="tech-stack">
+                <span class="tech-tag">Next.js 16</span>
+                <span class="tech-tag">React 19</span>
+                <span class="tech-tag">Tailwind CSS 4</span>
+                <span class="tech-tag">Supabase</span>
+                <span class="tech-tag">Resend</span>
+                <span class="tech-tag">Vercel</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://www.trendstamp.com"
+                  target="_blank"
+                  rel="noopener"
+                  class="project-link"
+                >
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                  trendstamp.com
+                </a>
               </div>
             </div>
-            <div class="project-description">
-              <p>
-                Automated pipeline that continuously syncs a marketing platform's
-                live schema registry into a searchable HTML reference and a
-                self-updating diagram, keeping the team's data model documentation
-                always current without manual effort.
-              </p>
+
+            <div class="project-card">
+              <div class="project-header">
+                <h3><i class="fas fa-globe"></i> Vondle</h3>
+                <div class="project-type">SaaS • Full Stack</div>
+              </div>
+              <div class="project-description">
+                <p>
+                  A publishing platform that turns Notion pages into fast,
+                  SEO-ready websites. Users connect their Notion workspace,
+                  pick pages, and get a live site with its own address.
+                </p>
+              </div>
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <i class="fas fa-users"></i>
+                  <span
+                    >Multi-tenant architecture: auth, user dashboard, and
+                    per-site dynamic routing from a single app</span
+                  >
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-plug"></i>
+                  <span
+                    >Notion API integration renders pages as production
+                    websites with sitemaps and SEO metadata</span
+                  >
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-credit-card"></i>
+                  <span
+                    >Stripe subscription billing with Supabase auth and
+                    Postgres underneath</span
+                  >
+                </div>
+              </div>
+              <div class="tech-stack">
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Supabase</span>
+                <span class="tech-tag">Stripe</span>
+                <span class="tech-tag">Notion API</span>
+                <span class="tech-tag">Vercel</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://vondle.vercel.app"
+                  target="_blank"
+                  rel="noopener"
+                  class="project-link"
+                >
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                  vondle.vercel.app
+                </a>
+              </div>
             </div>
-            <div class="project-highlights">
-              <div class="highlight-item">
-                <i class="fas fa-sync-alt"></i>
-                <span>
-                  Scheduled batch job that fetches, filters, and renders schema
-                  definitions into multiple output formats including interactive
-                  HTML and diagram XML
-                </span>
+
+            <div class="project-card">
+              <div class="project-header">
+                <h3><i class="fas fa-table"></i> CleanCopy</h3>
+                <div class="project-type">Browser Extension • Product</div>
               </div>
-              <div class="highlight-item">
-                <i class="fas fa-search"></i>
-                <span>
-                  Client-side search, identity field cross-reference matrix, and
-                  ML model lookup — all self-contained with no external dependencies
-                </span>
+              <div class="project-description">
+                <p>
+                  A Chrome extension that extracts tables from any web page and
+                  copies them as clean, spreadsheet-ready data in one click.
+                  Published on the Chrome Web Store.
+                </p>
               </div>
-              <div class="highlight-item">
-                <i class="fas fa-code-branch"></i>
-                <span>
-                  Deployed via infrastructure-as-code with multi-environment
-                  support, Slack failure alerting, and versioned container images
-                </span>
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <i class="fas fa-bolt"></i>
+                  <span
+                    >One-click extraction of any HTML table with a live
+                    preview and per-table selection</span
+                  >
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-shield-alt"></i>
+                  <span
+                    >Privacy-hardened: minimal permissions, strict content
+                    security policy, no data ever leaves the browser</span
+                  >
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-code-branch"></i>
+                  <span
+                    >Five versioned releases with a public changelog and
+                    store listing</span
+                  >
+                </div>
               </div>
-            </div>
-            <div class="tech-stack">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Docker</span>
-              <span class="tech-tag">Cloud Batch</span>
-              <span class="tech-tag">Cloud Workflows</span>
-              <span class="tech-tag">Cloud Scheduler</span>
-              <span class="tech-tag">Pulumi (IaC)</span>
+              <div class="tech-stack">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Chrome Extensions</span>
+                <span class="tech-tag">Manifest V3</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://chromewebstore.google.com/detail/cleancopy/hncaipipinhhdfdphjdkilbepkdgomik"
+                  target="_blank"
+                  rel="noopener"
+                  class="project-link"
+                >
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                  Chrome Web Store
+                </a>
+              </div>
             </div>
           </div>
+        </div>
 
-          <div class="project-card">
-            <div class="project-header">
-              <h3>
-                <i class="fas fa-robot"></i> AI-Powered Internal Data Assistant
-              </h3>
-              <div class="project-type">
-                AI Engineering • Internal Tooling
+        <div class="project-group">
+          <h3 class="project-group-title">
+            <i class="fab fa-github"></i> Open Source & Data Engineering
+          </h3>
+          <p class="project-group-note">
+            Public repos built to show real architecture: readable code, tests,
+            and honest tradeoffs.
+          </p>
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="project-header">
+                <h3><i class="fas fa-diagram-project"></i> trendstamp-analytics</h3>
+                <div class="project-type">Data Engineering • Open Source</div>
+              </div>
+              <div class="project-description">
+                <p>
+                  An analytics-engineering pipeline over trendstamp.com's
+                  production database: dbt models building daily rollups of
+                  topic rotation and signup growth, tested and orchestrated.
+                </p>
+              </div>
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <i class="fas fa-cubes"></i>
+                  <span
+                    >dbt staging and mart models with schema tests, verified
+                    end to end against the production database</span
+                  >
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-clock"></i>
+                  <span
+                    >Dagster orchestration with a daily schedule, plus a
+                    streaming component (Supabase Realtime to GCP Pub/Sub)</span
+                  >
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-lock"></i>
+                  <span
+                    >Low-privilege, read-only database role designed for safe
+                    analytics access to a live product</span
+                  >
+                </div>
+              </div>
+              <div class="tech-stack">
+                <span class="tech-tag">dbt</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Dagster</span>
+                <span class="tech-tag">GCP Pub/Sub</span>
+                <span class="tech-tag">Python</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/puneetsran/trendstamp-analytics"
+                  target="_blank"
+                  rel="noopener"
+                  class="project-link"
+                >
+                  <i class="fab fa-github"></i> View code
+                </a>
               </div>
             </div>
-            <div class="project-description">
-              <p>
-                Conversational AI assistant deployed on Slack and Google Chat that
-                answers internal team questions about datasets, audience segments,
-                journey configurations, and schema fields — using an agentic LLM
-                loop with live marketing platform API integrations.
-              </p>
-            </div>
-            <div class="project-highlights">
-              <div class="highlight-item">
-                <i class="fas fa-brain"></i>
-                <span>
-                  Multi-turn agentic loop where the LLM issues tool calls across
-                  live APIs until it has enough context to answer — up to multiple
-                  rounds of reasoning per question
-                </span>
+
+            <div class="project-card">
+              <div class="project-header">
+                <h3><i class="fas fa-file-circle-question"></i> local-doc-rag</h3>
+                <div class="project-type">AI Engineering • Open Source</div>
               </div>
-              <div class="highlight-item">
-                <i class="fas fa-bolt"></i>
-                <span>
-                  Schema fields pre-indexed at build time for fast, rate-limit-free
-                  lookups; audience and journey data fetched live on demand
-                </span>
+              <div class="project-description">
+                <p>
+                  A local-first RAG pipeline: ask questions about your own
+                  documents fully offline on a laptop, with a retrieval
+                  evaluation harness and an agentic Claude mode.
+                </p>
               </div>
-              <div class="highlight-item">
-                <i class="fas fa-comments"></i>
-                <span>
-                  Thread-aware on Slack — uses full conversation history as context
-                  for follow-up questions within a thread
-                </span>
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <i class="fas fa-laptop"></i>
+                  <span
+                    >Fully local stack: Ollama embeddings and generation with
+                    DuckDB as the vector store, zero cloud dependencies</span
+                  >
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-vial"></i>
+                  <span
+                    >Evaluation harness reporting Recall@k and MRR@k, plus a
+                    faithfulness eval for unanswerable questions</span
+                  >
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-magnifying-glass"></i>
+                  <span
+                    >Agentic mode where Claude drives its own search tool,
+                    deciding when and how often to query the index</span
+                  >
+                </div>
               </div>
-            </div>
-            <div class="tech-stack">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Anthropic Claude SDK</span>
-              <span class="tech-tag">Agentic AI</span>
-              <span class="tech-tag">Slack Bolt</span>
-              <span class="tech-tag">Docker</span>
-              <span class="tech-tag">Cloud Run</span>
+              <div class="tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Ollama</span>
+                <span class="tech-tag">DuckDB</span>
+                <span class="tech-tag">Claude API</span>
+                <span class="tech-tag">RAG</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/puneetsran/local-doc-rag"
+                  target="_blank"
+                  rel="noopener"
+                  class="project-link"
+                >
+                  <i class="fab fa-github"></i> View code
+                </a>
+              </div>
             </div>
           </div>
+        </div>
 
-          <div class="project-card">
-            <div class="project-header">
-              <h3>
-                <i class="fas fa-bell"></i> Push Notification Traffic Analyzer
-              </h3>
-              <div class="project-type">
-                Full-Stack • Platform Engineering
+        <div class="project-group">
+          <h3 class="project-group-title">
+            <i class="fas fa-briefcase"></i> Selected Work Projects
+          </h3>
+          <p class="project-group-note">
+            Internal systems built at TELUS, described in generalized terms.
+          </p>
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="project-header">
+                <h3>
+                  <i class="fas fa-sitemap"></i> Schema Registry Sync & Visualization
+                </h3>
+                <div class="project-type">
+                  Data Engineering • Developer Tooling
+                </div>
+              </div>
+              <div class="project-description">
+                <p>
+                  Automated pipeline that continuously syncs a marketing platform's
+                  live schema registry into a searchable HTML reference and a
+                  self-updating diagram, keeping the team's data model documentation
+                  always current without manual effort.
+                </p>
+              </div>
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <i class="fas fa-sync-alt"></i>
+                  <span>
+                    Scheduled batch job that fetches, filters, and renders schema
+                    definitions into multiple output formats including interactive
+                    HTML and diagram XML
+                  </span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-search"></i>
+                  <span>
+                    Client-side search, identity field cross-reference matrix, and
+                    ML model lookup, all self-contained with no external dependencies
+                  </span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-code-branch"></i>
+                  <span>
+                    Deployed via infrastructure-as-code with multi-environment
+                    support, Slack failure alerting, and versioned container images
+                  </span>
+                </div>
+              </div>
+              <div class="tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">Cloud Batch</span>
+                <span class="tech-tag">Cloud Workflows</span>
+                <span class="tech-tag">Cloud Scheduler</span>
+                <span class="tech-tag">Pulumi (IaC)</span>
               </div>
             </div>
-            <div class="project-description">
-              <p>
-                Web application that helps campaign operations teams assess the
-                traffic impact of push notifications before they are sent —
-                querying live observability telemetry and modeling projected load
-                against historical peak baselines to produce a clear recommendation.
-              </p>
+
+            <div class="project-card">
+              <div class="project-header">
+                <h3>
+                  <i class="fas fa-robot"></i> AI-Powered Internal Data Assistant
+                </h3>
+                <div class="project-type">
+                  AI Engineering • Internal Tooling
+                </div>
+              </div>
+              <div class="project-description">
+                <p>
+                  Conversational AI assistant deployed on Slack and Google Chat that
+                  answers internal team questions about datasets, audience segments,
+                  journey configurations, and schema fields, using an agentic LLM
+                  loop with live marketing platform API integrations.
+                </p>
+              </div>
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <i class="fas fa-brain"></i>
+                  <span>
+                    Multi-turn agentic loop where the LLM issues tool calls across
+                    live APIs until it has enough context to answer, up to multiple
+                    rounds of reasoning per question
+                  </span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-bolt"></i>
+                  <span>
+                    Schema fields pre-indexed at build time for fast, rate-limit-free
+                    lookups; audience and journey data fetched live on demand
+                  </span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-comments"></i>
+                  <span>
+                    Thread-aware on Slack, using full conversation history as context
+                    for follow-up questions within a thread
+                  </span>
+                </div>
+              </div>
+              <div class="tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Anthropic Claude SDK</span>
+                <span class="tech-tag">Agentic AI</span>
+                <span class="tech-tag">Slack Bolt</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">Cloud Run</span>
+              </div>
             </div>
-            <div class="project-highlights">
-              <div class="highlight-item">
-                <i class="fas fa-chart-bar"></i>
-                <span>
-                  Runs parallel telemetry queries (baseline traffic, 90-day peak,
-                  error rate, response time) and models projected load using a
-                  batch send model, outputting green/yellow/red impact ratings
-                </span>
+
+            <div class="project-card">
+              <div class="project-header">
+                <h3>
+                  <i class="fas fa-bell"></i> Push Notification Traffic Analyzer
+                </h3>
+                <div class="project-type">
+                  Full-Stack • Platform Engineering
+                </div>
               </div>
-              <div class="highlight-item">
-                <i class="fas fa-layer-group"></i>
-                <span>
-                  Always analyzes background services affected by every push send
-                  in addition to the destination screen, giving a complete traffic
-                  picture
-                </span>
+              <div class="project-description">
+                <p>
+                  Web application that helps campaign operations teams assess the
+                  traffic impact of push notifications before they are sent,
+                  querying live observability telemetry and modeling projected load
+                  against historical peak baselines to produce a clear recommendation.
+                </p>
               </div>
-              <div class="highlight-item">
-                <i class="fas fa-lock"></i>
-                <span>
-                  Deployed on a fully managed cloud platform with identity-aware
-                  access control, CI/CD automation, and infrastructure-as-code
-                </span>
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <i class="fas fa-chart-line"></i>
+                  <span>
+                    Queries live observability metrics (requests per minute,
+                    error rate, response time) and models projected load using a
+                    configurable impact model
+                  </span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-traffic-light"></i>
+                  <span>
+                    Produces green/yellow/red send recommendations against
+                    historical peak baselines
+                  </span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-server"></i>
+                  <span>
+                    React frontend with a Node.js API layer, deployed on Cloud Run
+                  </span>
+                </div>
+              </div>
+              <div class="tech-stack">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Dynatrace</span>
+                <span class="tech-tag">Cloud Run</span>
+                <span class="tech-tag">Docker</span>
               </div>
             </div>
-            <div class="tech-stack">
-              <span class="tech-tag">React & Vite</span>
-              <span class="tech-tag">Node.js & Express</span>
-              <span class="tech-tag">Dynatrace DQL</span>
-              <span class="tech-tag">Cloud Run</span>
-              <span class="tech-tag">Terraform (IaC)</span>
-              <span class="tech-tag">Cloud Build CI/CD</span>
+
+            <div class="project-card">
+              <div class="project-header">
+                <h3>
+                  <i class="fas fa-shopping-cart"></i> Cart Abandonment Recovery
+                  System
+                </h3>
+                <div class="project-type">
+                  Data Engineering • Revenue Recovery
+                </div>
+              </div>
+              <div class="project-description">
+                <p>
+                  Multi-stage data pipeline identifying cart abandoners across
+                  multiple product lines, feeding targeted re-engagement
+                  campaigns that generate significant recovered revenue.
+                </p>
+              </div>
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <i class="fas fa-filter"></i>
+                  <span
+                    >Complex SQL logic for consent management, duplicate
+                    prevention, and multi-brand customer identification</span
+                  >
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-route"></i>
+                  <span
+                    >End-to-end orchestration from BigQuery extraction to
+                    campaign activation in Adobe Journey Optimizer</span
+                  >
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-dollar-sign"></i>
+                  <span
+                    >Directly attributable recovered revenue from abandoned
+                    transactions</span
+                  >
+                </div>
+              </div>
+              <div class="tech-stack">
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">BigQuery</span>
+                <span class="tech-tag">Adobe Journey Optimizer</span>
+                <span class="tech-tag">Stored Procedures</span>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-header">
+                <h3>
+                  <i class="fas fa-chart-line"></i> Email Campaign Attribution
+                  Dashboard
+                </h3>
+                <div class="project-type">
+                  Business Intelligence • Revenue Attribution
+                </div>
+              </div>
+              <div class="project-description">
+                <p>
+                  Comprehensive revenue attribution system tracking customer
+                  journeys from email campaigns to purchases across multiple
+                  brands with sophisticated product revenue calculations.
+                </p>
+              </div>
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <i class="fas fa-search-dollar"></i>
+                  <span
+                    >Multi-brand revenue attribution with 7-day attribution
+                    windows and complex product pricing logic</span
+                  >
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-link"></i>
+                  <span
+                    >Cross-platform data integration linking email events,
+                    clickstream data, and purchase transactions</span
+                  >
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-dashboard"></i>
+                  <span
+                    >Powers executive Looker Studio dashboards for real-time
+                    campaign performance monitoring</span
+                  >
+                </div>
+              </div>
+              <div class="tech-stack">
+                <span class="tech-tag">BigQuery</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">Looker Studio</span>
+                <span class="tech-tag">Cloud Scheduler</span>
+                <span class="tech-tag">Revenue Attribution</span>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-header">
+                <h3>
+                  <i class="fas fa-exclamation-triangle"></i> AJO Campaign Anomaly
+                  Detection System
+                </h3>
+                <div class="project-type">
+                  Data Engineering • Monitoring & Alerting
+                </div>
+              </div>
+              <div class="project-description">
+                <p>
+                  Automated anomaly detection system monitoring marketing
+                  automation campaigns with intelligent alerting for proactive
+                  campaign management.
+                </p>
+              </div>
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <i class="fas fa-robot"></i>
+                  <span
+                    >Automated anomaly detection with containerized Python scripts
+                    and batch job orchestration</span
+                  >
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-bell"></i>
+                  <span>Daily alerting system for anomaly notifications</span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-shield-alt"></i>
+                  <span
+                    >Proactive campaign monitoring preventing revenue loss through
+                    early anomaly detection</span
+                  >
+                </div>
+              </div>
+              <div class="tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">Cloud Workflows</span>
+                <span class="tech-tag">Cloud Scheduler</span>
+                <span class="tech-tag">Secret Manager</span>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-header">
+                <h3>
+                  <i class="fas fa-building"></i> Enterprise Data Analytics
+                  Platform
+                </h3>
+                <div class="project-type">
+                  Data Engineering • Enterprise Scale
+                </div>
+              </div>
+              <div class="project-description">
+                <p>
+                  At TELUS, I've built data-driven systems that drive
+                  <strong>significant business impact</strong>, designed 13+
+                  production data pipelines, and built fault-tolerant ETL systems
+                  that process large volumes of customer data daily.
+                </p>
+              </div>
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <i class="fas fa-layer-group"></i>
+                  <span
+                    >Multi-domain architecture with batch processing, streaming
+                    data flows, and automated alerting systems</span
+                  >
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-sync-alt"></i>
+                  <span
+                    >Cloud Workflows orchestrating complex ETL processes with
+                    fault-tolerant batch job execution</span
+                  >
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-database"></i>
+                  <span
+                    >Comprehensive data governance with managed datasets, stored
+                    procedures, views, and automated schema management</span
+                  >
+                </div>
+              </div>
+              <div class="tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Pulumi</span>
+                <span class="tech-tag">BigQuery</span>
+                <span class="tech-tag">GCP</span>
+                <span class="tech-tag">YAML</span>
+              </div>
             </div>
           </div>
+        </div>
 
-          <div class="project-card">
-            <div class="project-header">
-              <h3>
-                <i class="fas fa-shopping-cart"></i> Cart Abandonment Recovery
-                System
-              </h3>
-              <div class="project-type">
-                Data Engineering • Revenue Generation
+        <div class="project-group">
+          <h3 class="project-group-title">
+            <i class="fas fa-graduation-cap"></i> Machine Learning & Research
+          </h3>
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="project-header">
+                <h3><i class="fas fa-heart"></i> Dating a Scientist</h3>
+                <div class="project-type">Machine Learning • Data Science</div>
+              </div>
+              <div class="project-description">
+                <p>
+                  Advanced clustering analysis on OkCupid dataset to identify user
+                  behavior patterns and improve matching algorithms.
+                </p>
+              </div>
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <i class="fas fa-users"></i>
+                  <span
+                    >User Segmentation using KMeans, Agglomerative Clustering, and
+                    DBSCAN</span
+                  >
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-cogs"></i>
+                  <span
+                    >Feature Engineering with Min-Max scaling and advanced
+                    encoding techniques</span
+                  >
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-chart-bar"></i>
+                  <span
+                    >Actionable insights for user engagement and retention
+                    strategies</span
+                  >
+                </div>
+              </div>
+              <div class="tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Scikit-Learn</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">Clustering</span>
               </div>
             </div>
-            <div class="project-description">
-              <p>
-                Sophisticated multi-stage data pipeline system that identifies
-                cart abandoners across multiple product lines, then orchestrates
-                targeted email campaigns through marketing automation platforms
-                to recover lost revenue.
-              </p>
-            </div>
-            <div class="project-highlights">
-              <div class="highlight-item">
-                <i class="fas fa-dollar-sign"></i>
-                <span
-                  >Significant revenue recovery through intelligent customer
-                  journey orchestration and targeted email campaigns</span
-                >
-              </div>
-              <div class="highlight-item">
-                <i class="fas fa-brain"></i>
-                <span
-                  >Complex SQL logic with consent management, duplicate
-                  prevention, and multi-brand customer identification</span
-                >
-              </div>
-              <div class="highlight-item">
-                <i class="fas fa-sync-alt"></i>
-                <span
-                  >Automated batch processing with cloud data warehouse to
-                  marketing platform integration and daily alerting</span
-                >
-              </div>
-            </div>
-            <div class="tech-stack">
-              <span class="tech-tag">Cloud Data Warehouse</span>
-              <span class="tech-tag">Marketing Automation Platform</span>
-              <span class="tech-tag">Cloud Workflows</span>
-              <span class="tech-tag">Infrastructure as Code</span>
-              <span class="tech-tag">Python</span>
-            </div>
-          </div>
 
-          <div class="project-card">
-            <div class="project-header">
-              <h3>
-                <i class="fas fa-chart-line"></i> Email Campaign Attribution
-                Dashboard
-              </h3>
-              <div class="project-type">
-                Business Intelligence • Revenue Attribution
+            <div class="project-card">
+              <div class="project-header">
+                <h3><i class="fas fa-feather-alt"></i> Complete Poetry</h3>
+                <div class="project-type">Deep Learning • NLP</div>
               </div>
-            </div>
-            <div class="project-description">
-              <p>
-                Comprehensive revenue attribution system tracking customer
-                journeys from email campaigns to purchases across multiple
-                brands with sophisticated product revenue calculations.
-              </p>
-            </div>
-            <div class="project-highlights">
-              <div class="highlight-item">
-                <i class="fas fa-search-dollar"></i>
-                <span
-                  >Multi-brand revenue attribution with 7-day attribution
-                  windows and complex product pricing logic</span
-                >
+              <div class="project-description">
+                <p>
+                  RNN-based deep learning model for automated poetry generation,
+                  exploring AI creativity and language modeling.
+                </p>
               </div>
-              <div class="highlight-item">
-                <i class="fas fa-link"></i>
-                <span
-                  >Cross-platform data integration linking email events,
-                  clickstream data, and purchase transactions</span
-                >
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <i class="fas fa-database"></i>
+                  <span
+                    >Trained on dataset of 15,652 poems for comprehensive language
+                    understanding</span
+                  >
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-brain"></i>
+                  <span
+                    >Multi-layer RNN architecture for improved vocabulary and
+                    style generation</span
+                  >
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-lightbulb"></i>
+                  <span
+                    >Research insights into challenges and limitations of
+                    AI-driven creative tasks</span
+                  >
+                </div>
               </div>
-              <div class="highlight-item">
-                <i class="fas fa-dashboard"></i>
-                <span
-                  >Powers executive Looker Studio dashboards for real-time
-                  campaign performance monitoring</span
-                >
+              <div class="tech-stack">
+                <span class="tech-tag">TensorFlow</span>
+                <span class="tech-tag">Keras</span>
+                <span class="tech-tag">RNN</span>
+                <span class="tech-tag">NLP</span>
               </div>
-            </div>
-            <div class="tech-stack">
-              <span class="tech-tag">BigQuery</span>
-              <span class="tech-tag">SQL</span>
-              <span class="tech-tag">Looker Studio</span>
-              <span class="tech-tag">Cloud Scheduler</span>
-              <span class="tech-tag">Revenue Attribution</span>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-header">
-              <h3>
-                <i class="fas fa-exclamation-triangle"></i> AJO Campaign Anomaly
-                Detection System
-              </h3>
-              <div class="project-type">
-                Data Engineering • Monitoring & Alerting
-              </div>
-            </div>
-            <div class="project-description">
-              <p>
-                Automated anomaly detection system monitoring marketing
-                automation campaigns with intelligent alerting for proactive
-                campaign management.
-              </p>
-            </div>
-            <div class="project-highlights">
-              <div class="highlight-item">
-                <i class="fas fa-robot"></i>
-                <span
-                  >Automated anomaly detection with containerized Python scripts
-                  and batch job orchestration</span
-                >
-              </div>
-              <div class="highlight-item">
-                <i class="fas fa-bell"></i>
-                <span>Daily alerting system for anomaly notifications</span>
-              </div>
-              <div class="highlight-item">
-                <i class="fas fa-shield-alt"></i>
-                <span
-                  >Proactive campaign monitoring preventing revenue loss through
-                  early anomaly detection</span
-                >
-              </div>
-            </div>
-            <div class="tech-stack">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Docker</span>
-              <span class="tech-tag">Cloud Workflows</span>
-              <span class="tech-tag">Cloud Scheduler</span>
-              <span class="tech-tag">Secret Manager</span>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-header">
-              <h3>
-                <i class="fas fa-building"></i> Enterprise Data Analytics
-                Platform
-              </h3>
-              <div class="project-type">
-                Data Engineering • Enterprise Scale
-              </div>
-            </div>
-            <div class="project-description">
-              <p>
-                At TELUS, I've built data-driven systems that drive
-                <strong>significant business impact</strong>, designed 13+
-                production data pipelines, and built fault-tolerant ETL systems
-                that process large volumes of customer data daily.
-              </p>
-            </div>
-            <div class="project-highlights">
-              <div class="highlight-item">
-                <i class="fas fa-layer-group"></i>
-                <span
-                  >Multi-domain architecture with batch processing, streaming
-                  data flows, and automated alerting systems</span
-                >
-              </div>
-              <div class="highlight-item">
-                <i class="fas fa-sync-alt"></i>
-                <span
-                  >Cloud Workflows orchestrating complex ETL processes with
-                  fault-tolerant batch job execution</span
-                >
-              </div>
-              <div class="highlight-item">
-                <i class="fas fa-database"></i>
-                <span
-                  >Comprehensive data governance with managed datasets, stored
-                  procedures, views, and automated schema management</span
-                >
-              </div>
-            </div>
-            <div class="tech-stack">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Pulumi</span>
-              <span class="tech-tag">BigQuery</span>
-              <span class="tech-tag">GCP</span>
-              <span class="tech-tag">YAML</span>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-header">
-              <h3><i class="fas fa-heart"></i> Dating a Scientist</h3>
-              <div class="project-type">Machine Learning • Data Science</div>
-            </div>
-            <div class="project-description">
-              <p>
-                Advanced clustering analysis on OkCupid dataset to identify user
-                behavior patterns and improve matching algorithms.
-              </p>
-            </div>
-            <div class="project-highlights">
-              <div class="highlight-item">
-                <i class="fas fa-users"></i>
-                <span
-                  >User Segmentation using KMeans, Agglomerative Clustering, and
-                  DBSCAN</span
-                >
-              </div>
-              <div class="highlight-item">
-                <i class="fas fa-cogs"></i>
-                <span
-                  >Feature Engineering with Min-Max scaling and advanced
-                  encoding techniques</span
-                >
-              </div>
-              <div class="highlight-item">
-                <i class="fas fa-chart-bar"></i>
-                <span
-                  >Actionable insights for user engagement and retention
-                  strategies</span
-                >
-              </div>
-            </div>
-            <div class="tech-stack">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Scikit-Learn</span>
-              <span class="tech-tag">Pandas</span>
-              <span class="tech-tag">Clustering</span>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-header">
-              <h3><i class="fas fa-feather-alt"></i> Complete Poetry</h3>
-              <div class="project-type">Deep Learning • NLP</div>
-            </div>
-            <div class="project-description">
-              <p>
-                RNN-based deep learning model for automated poetry generation,
-                exploring AI creativity and language modeling.
-              </p>
-            </div>
-            <div class="project-highlights">
-              <div class="highlight-item">
-                <i class="fas fa-database"></i>
-                <span
-                  >Trained on dataset of 15,652 poems for comprehensive language
-                  understanding</span
-                >
-              </div>
-              <div class="highlight-item">
-                <i class="fas fa-brain"></i>
-                <span
-                  >Multi-layer RNN architecture for improved vocabulary and
-                  style generation</span
-                >
-              </div>
-              <div class="highlight-item">
-                <i class="fas fa-lightbulb"></i>
-                <span
-                  >Research insights into challenges and limitations of
-                  AI-driven creative tasks</span
-                >
-              </div>
-            </div>
-            <div class="tech-stack">
-              <span class="tech-tag">TensorFlow</span>
-              <span class="tech-tag">Keras</span>
-              <span class="tech-tag">RNN</span>
-              <span class="tech-tag">NLP</span>
             </div>
           </div>
         </div>
@@ -903,6 +1238,7 @@
                 <a
                   href="https://www.linkedin.com/in/puneetsran/"
                   target="_blank"
+                  rel="noopener"
                 >
                   Connect with me professionally
                 </a>
@@ -915,7 +1251,7 @@
               </div>
               <div class="contact-details">
                 <h3>GitHub</h3>
-                <a href="https://github.com/puneetsran" target="_blank">
+                <a href="https://github.com/puneetsran" target="_blank" rel="noopener">
                   View my code and projects
                 </a>
               </div>
@@ -925,9 +1261,9 @@
       </section>
     </main>
 
-    <footer class="footer" data-aos="fade-up">
+    <footer class="footer">
       <div class="footer-content">
-        <p>&copy; 2025 Puneet Sran.</p>
+        <p>&copy; 2026 Puneet Sran.</p>
         <div class="footer-links">
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
@@ -943,99 +1279,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Puneet Sran - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Puneet Sran</h1>
-        <p>Data Engineering Professional</p>
-    </header>
-
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Data Engineering Professional with a Master’s in Data Science and hands-on experience in SQL, Python, and cloud-based data platforms (GCP, BigQuery). Skilled in data modeling, ETL pipelines, and building scalable dashboards to support business insights. Passionate about leveraging technology and AI-driven analytics to drive data integrity and business impact.</p>
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li><b>Languages:</b> Python, R, SQL, C, JavaScript, Markdown</li>
-            <li><b>Data Science & Analytics:</b> GCP, BigQuery, Looker Studio, Preprocessing, Tableau, Data pipelines</li>
-            <li><b>Libraries/Frameworks:</b> NumPy, pandas, Scikit Learn, TensorFlow, PyTorch, Matplotlib, Seaborn, NLP, Clustering</li>
-            <li><b>Key Strengths:</b> Business Understanding, Detail Oriented, Analytical Skills, Problem Solving, Communication Skills</li>
-        </ul>
-    </section>
-
-    <section id="experience">
-        <h2>Work Experience</h2>
-        <h3>Telus Communications Inc.</h3>
-        <p><b>Data Engineer</b> (Mar 2024 - Present, Vancouver)</p>
-        <ul>
-            <li>Recovered abandoned carts through targeted email campaigns, driving significant sales growth.</li>
-            <li>Crafting precise SQL queries to identify customers who abandon online transactions. Building engaging customer journeys in Adobe Journey Optomizer (AJO) to re-engage and convert.</li>
-            <li>Orchestrating end-to-end customer reactivation process, from extracting and transforming data from GCP (BigQuery) using SQL and stored procedures, to designing and executing targeted email campaigns in AJO.</li>
-            <li>Building & maintaining robust data pipelines to ensure desired data flows smoothly.</li>
-            <li>Optimizing ETL workflow to ensure scalability, and fault-tolerant solutions by automating alerts through GCP scheduled jobs using Python and YAML, notifying teams of ingestion failures or email delivery issues.</li>
-            <li>Building dashboards in Looker Studio to present meaningful findings of campaigns.</li>
-        </ul>
-        <h3>Telus Communications Inc.</h3>
-        <p><b>Developer Analyst I & Il</b> (Aug 2021 - Feb 2024, Vancouver)</p>
-        <ul>
-            <li>Helped teams implement analytics solutions through dataLayer and Adobe Launch.</li>
-            <li>Understanding stakeholder analytics requirements and developing implementation plans.</li>
-            <li>Working with data analysts, product owners to enhance data usability and accessibility.</li>
-            <li>Assisted in implementing a cookie consent banner compliant with Law 25, collaborating with OneTrust to design a solution that transparently communicates data collection practices and ensures regulatory compliance.</li>
-        </ul>
-        <h3>Nedieon Inc.</h3>
-        <p><b>Mechatronic Engineer</b> (March 2020 - February 2021, Port Coquitlam)</p>
-        <ul>
-            <li>Designed concepts of a robot to automate the task of picking and dropping golf balls on grass fields in which the design eliminated the need of manual labor and was a great cost saver for golf courses. Programmed various sensors in Python and C.</li>
-            <li>Performed mechanical assembly, Finite Element Analysis, and control of the robot using arduino and ESP32.</li>
-        </ul>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <h3>Dating a Scientist</h3>
-        <ul>
-            <li>Conducted clustering analysis on the OkCupid dataset using KMeans, Agglomerative Clustering, and DBSCAN to identify user segments.</li>
-            <li>Engineered features like essay length and days since last online, applying Min-Max scaling and advanced encoding techniques.</li>
-            <li>Proposed recommendations for user engagement and retention based on cluster insights.</li>
-        </ul>
-        <h3>Complete Poetry</h3>
-        <ul>
-            <li>Developed RNN-based deep learning models using TensorFlow and Keras to generate poetry from a dataset of 15,652 poems.</li>
-            <li>Improved vocabulary usage through multi-layer RNNs, identifying challenges in AI-driven creative tasks.</li>
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>You can reach me at <a href="mailto:psran711@gmail.com">psran711@gmail.com</a></p>
-        <p>
-            <a href="https://www.linkedin.com/in/puneet-sran-a22b0b13b/" target="_blank">LinkedIn</a> | 
-            <a href="https://github.com/puneetsran" target="_blank">Github</a>
-        </p>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Puneet Sran</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html> -->
